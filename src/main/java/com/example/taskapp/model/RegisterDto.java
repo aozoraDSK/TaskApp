@@ -26,6 +26,19 @@ public class RegisterDto {
 
     private String confirmPassword;
 
+    public RegisterDto(String firstName, String lastName, String email, String phone, String address, String password, String confirmPassword) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phone = phone;
+        this.address = address;
+        this.password = password;
+        this.confirmPassword = confirmPassword;
+    }
+
+    public RegisterDto() {
+    }
+
     public @NotEmpty String getFirstName() {
         return firstName;
     }

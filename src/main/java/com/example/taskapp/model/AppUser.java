@@ -10,7 +10,7 @@ public class AppUser {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int userId;
 
     @Column(name = "first_name", nullable = false)
     private String firstName;
@@ -26,17 +26,33 @@ public class AppUser {
     private String address;
     @Column(name = "password", nullable = false)
     private String password;
-    @Column(name = "role")
+    @Column(name = "role", nullable = false)
     private String role;
     @Column(name = "createdAt", nullable = false)
     private Date createdAt;
 
-    public int getId() {
-        return id;
+    public AppUser(int userId, String firstName, String lastName, String email, String phone, String address, String password, String role, Date createdAt) {
+        this.userId = userId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phone = phone;
+        this.address = address;
+        this.password = password;
+        this.role = role;
+        this.createdAt = createdAt;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public AppUser() {
+
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int id) {
+        this.userId = id;
     }
 
     public String getFirstName() {

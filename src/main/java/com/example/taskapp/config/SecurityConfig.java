@@ -17,7 +17,7 @@ public class SecurityConfig {
         return http
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/").permitAll()
-                        .requestMatchers("/contact").permitAll()
+                        .requestMatchers("/task").authenticated()
                         .requestMatchers("/register").permitAll()
                         .requestMatchers("/login").permitAll()
                         .requestMatchers("/logout").permitAll()

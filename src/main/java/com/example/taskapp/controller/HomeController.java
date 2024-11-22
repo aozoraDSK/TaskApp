@@ -10,9 +10,9 @@ public class HomeController {
         return "index";
     }
 
-    @GetMapping("/contact")
-    public String contact() {
-        return "contact";
+    @GetMapping("/tasks")
+    public String tasks() {
+        return "tasks";
     }
 
 }
